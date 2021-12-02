@@ -1,0 +1,257 @@
+/*
+ *                  CONTENTS
+ * CUSTOM PROPERTIES
+ * ....colors
+ * ....fonts
+ * ....sizes
+ *
+ * GENERIC
+ * ....box-sizing
+ * ....resets
+ * ....elements
+ *
+ * CARD
+ * ....card
+ *
+ * PROFILE INFO
+ * ....profile info (container)
+ * ....image
+ * ....name
+ * ....age
+ * ....location
+ * 
+ * STATS
+ * ....stats (container)
+ * ....stat
+ * ....label
+ * ....number
+ * ....space between stats
+ *
+ * CLASSES
+ * ....text-layout
+ * ....layout
+ */
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #CUSTOM PROPERTIES
+\*----------------------------*/
+
+/* Colors */
+html {
+    --body-background-color: hsl(185, 75%, 39%);
+    --base-text-color: hsl(227, 10%, 46%);
+    --bold-text-color: hsl(229, 23%, 23%);
+    --stat-border-color: hsla(0, 0%, 59%, 0.247);
+}
+
+
+
+
+
+/* Fonts */
+html {
+    --base-font: 400 18px 'Kumbh Sans', sans-serif;
+    --bold: 700;
+}
+
+
+
+
+
+/* Sizes */
+html {
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #GENERIC 
+\*----------------------------*/
+
+/* Box-sizing */
+html                   { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit;    }
+
+
+
+
+
+/* Resets */
+* { margin: 0; padding: 0; }
+
+
+
+
+
+/* Elements */
+html { font: var(--base-font); }
+ul   { list-style-type: none;  }
+
+body { 
+    background-color: var(--body-background-color);
+    color: var(--base-text-color); 
+}
+
+footer {
+    background-color: white;
+    color: var(--bold-text-color);
+    font-weight: var(--bold);
+    font-size: 11px;
+    text-align: center;
+    padding: 1rem 0 1rem;
+}
+
+footer a {
+    color: var(--body-background-color);
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #CARD
+\*----------------------------*/
+
+.card {
+    background-color: white;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    width: calc(0.86 * var(--mobile));
+    border-radius: 0.6rem;
+    padding-top: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #PERSONAL INFO
+\*----------------------------*/
+
+.personal-info {
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+}
+
+.image {
+    display: block;
+    margin: 0 auto 1rem;
+    border: 5px solid white; 
+    border-radius: 100%; 
+}
+
+.name {
+    display: inline;
+    color: var(--bold-text-color);
+    font-weight: var(--bold);
+}
+
+.age {
+    display: inline;
+}
+
+.location {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #STATS
+\*----------------------------*/
+
+.stats {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--stat-border-color);
+    padding: 1.2rem 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    order: 1;
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.number {
+    color: var(--bold-text-color);
+    font-weight: bold;
+}
+
+.space-between-stat {
+    margin-right: 2.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #CLASSES
+\*----------------------------*/
+
+/* Text layout */
+.hide-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Layout */
+.main-grid {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
